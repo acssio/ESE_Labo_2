@@ -1,0 +1,20 @@
+./objects/stm32f7xx_hal_rcc_ex.o: \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
+  RTE\Device\STM32F746NGHx\stm32f7xx_hal_conf.h \
+  RTE\_Target_1\RTE_Components.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_def.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f746xx.h \
+  C:\Keil_v5\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm7.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_rcc_ex.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_gpio_ex.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_cortex.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash_ex.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr.h \
+  C:\Keil_v5\Keil\STM32F7xx_DFP\2.12.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pwr_ex.h
