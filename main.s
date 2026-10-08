@@ -23,6 +23,8 @@ dataSize EQU 4+8+4
 	
 ptrReg	RN 8				; name for register alias
 ptrReg2 RN 9
+ptrReg3 RN 10
+swapCount RN 11
 	
 
 
@@ -60,9 +62,11 @@ loop
 	cmp	r0,#'s'
 	beq	SortDatabase	; sort database
 	cmp	r0,#'Q'
-	beq	Quit			; quit
+	ldreq pc,=Quit
+	;beq	Quit			; quit
 	cmp	r0,#'q'
-	beq	Quit			; quit
+	ldreq pc,=Quit
+	;beq	Quit			; quit
 	b	loop
 ;=================================================================
 ;------------------------ NEW ENTRY ------------------------------
@@ -195,9 +199,51 @@ CheckNullPtrDE
 ;------------------------ SORT DATABASE --------------------------
 ;=================================================================
 SortDatabase
-; TODO add your code here
+	mov swapCount,#0	;Reset Swap Count
 
-	B	loop
+; Go to first entry
+	ldr ptrReg2,=Header 	; Get Header adress (First list adress)
+	ldr ptrReg,[ptrReg2] 
+	
+; Check if the list is empty
+	cmp ptrReg, #0 			; Check Header is set r0 == 0 ?.
+	beq ListEmpty
+		
+CheckNullPtrSD
+	; Print name in the value
+	mov	r0, ptrReg		; Set first parameter
+	
+	;Load age 1 in r2
+	add r0, r0, #age	; add offset
+	ldr r2, [r0]
+	
+	;Load age 2 in r3
+	ldr r0, [ptrReg]
+	add r0, r0, #age	; add offset
+	ldr r3, [r0]
+	
+	cmp r2,r3
+	addhi swapCount,swapCount,#1 ; Increment nbr of swap
+	
+	ldr r0, [ptrReg]	; r0 = *ptrReg
+	ldrhi ptrReg3, [ptrReg]	; ptrReg3 = ptrReg1*
+	ldrhi r1, [ptrReg3]	; r1 = *ptrReg3
+	strhi r1, [ptrReg]	; *ptrReg1 = *ptrReg3
+	strhi ptrReg, [ptrReg3]	; *ptrReg3 = ptrReg1
+	strhi ptrReg3,[ptrReg2] ; *ptrReg2 = ptrReg3
+	
+	cmp r0, #0 			; Check if last element ?
+	mov ptrReg2, ptrReg ; Save last value of ptrReg
+	mov ptrReg,r0		; ptr = r0
+	bne CheckNullPtrSD
+	
+	; Control if last swap
+	cmp swapCount, #0 ; If there was no swaps this time, return
+	bne	SortDatabase
+	
+	B loop
+	
+
 ;=================================================================
 ;------------------------ QUIT -----------------------------------
 ;=================================================================

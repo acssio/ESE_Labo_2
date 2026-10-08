@@ -21,12 +21,18 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.1.0
 Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-C:\Users\alessio.ciardo\Documents\GIT\Labo2\Labo02.uvprojx
+C:\Users\alessio.ciardo\Documents\GIT\ESE_Labo_2\Labo02.uvprojx
 Project File Date:  10/08/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target_1'
+"main.s", line 300: Warning: A1581W: Added 3 bytes of padding at address 0x221
+  300 00000224  AREA  |.data|, DATA, READWRITE, ALIGN=8
+0 Errors, 1 Warning
+assembling main.s...
+linking...
+Program Size: Code=19536 RO-data=1104 RW-data=4148 ZI-data=1888  
 ".\Objects\Labo02.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -87,15 +93,15 @@ Package Vendor: Keil
       Source file:   Source/retarget_io.c
 
    * Component: Keil::Device:STM32Cube Framework:Classic@1.2.7
-      Include file:  MDK/Templates/Inc/stm32f7xx_hal_conf.h
-      Include file:  MDK/Templates/Inc/stm32f7xx_it.h
-      Source file:   MDK/Templates/Src/stm32f7xx_hal_msp.c
       Source file:   MDK/Templates/Src/stm32f7xx_it.c
       Include file:  MDK/Templates_LL/Inc/main.h
+      Source file:   MDK/Templates/Src/stm32f7xx_hal_msp.c
       Source file:   MDK/Templates_LL/Src/main.c
-      Include file:  MDK/Templates/Inc/main.h
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Source file:   MDK/Templates/Src/main.c
+      Include file:  MDK/Templates/Inc/stm32f7xx_hal_conf.h
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates/Inc/stm32f7xx_it.h
+      Include file:  MDK/Templates/Inc/main.h
 
    * Component: Keil::Device:STM32Cube HAL:Common@1.2.7
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
@@ -117,8 +123,8 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup@1.2.4
       Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
-      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f746xx.s
       Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f746xx.s
       Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
 Build Time Elapsed:  00:00:00
